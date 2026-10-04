@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vibe-wise",
+  "version": "1.0.0",
+  "description": "Learn software design while ChatGPT and Codex implement the code you understand.",
+  "license": "MIT",
+  "keywords": ["learning", "coding", "architecture", "mentoring"],
+  "extensions": {
+    "com.openai": {
+      "hooks": "./hooks/hooks.json",
+      "interface": {
+        "displayName": "VibeWise",
+        "shortDescription": "Learn as you build with ChatGPT and Codex",
+        "category": "Productivity",
+        "defaultPrompt": ["Use VibeWise to help me learn as I build this project."]
+      }
+    }
+  }
+}

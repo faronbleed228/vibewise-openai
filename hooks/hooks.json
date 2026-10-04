@@ -1,0 +1,19 @@
+{
+  "description": "Restore local VibeWise state in supported runtimes.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume|clear|compact)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/hooks/session_start.py\"",
+            "timeout": 5,
+            "additionalContextLimit": 5000,
+            "statusMessage": "Restoring VibeWise learning context"
+          }
+        ]
+      }
+    ]
+  }
+}

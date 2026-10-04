@@ -1,0 +1,16 @@
+.vibe-wise/
+.sensible-vibes/
+__pycache__/
+*.pyc
+dist/
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+*.tmp
+*.log

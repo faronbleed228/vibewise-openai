@@ -1,0 +1,4 @@
+interface:
+  display_name: "VibeWise"
+  short_description: "Learn software design as AI writes your code"
+  default_prompt: "Use $vibewise to help me learn as I build this project."

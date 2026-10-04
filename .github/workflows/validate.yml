@@ -1,0 +1,29 @@
+name: Validate VibeWise
+on: [push, pull_request]
+permissions:
+  contents: read
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ['3.10', '3.14']
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python scripts/build.py --check
+      - run: python -m unittest discover -s tests -v
+      - uses: actions/upload-artifact@v7
+        with:
+          name: vibewise-${{ matrix.os }}-${{ matrix.python }}
+          path: dist/*.zip
+          if-no-files-found: error
