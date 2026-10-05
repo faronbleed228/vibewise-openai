@@ -136,7 +136,8 @@ model checks are listed in [docs/behavior-checks.md](docs/behavior-checks.md).
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for development and pull requests,
 [CHANGELOG.md](CHANGELOG.md) for release history, and
-[the GitHub publishing guide](docs/github.md) to create your repository.
+[GitHub's repository creation guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+to create your repository.
 
 ## License
 
