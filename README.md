@@ -144,3 +144,17 @@ to create your repository.
 Released under the [MIT License](LICENSE). You can use, modify, and distribute
 this project, including commercially, while retaining the license and copyright
 notice. Original project attribution is preserved in [NOTICE.md](NOTICE.md).
+
+## Reproduce the repository checks
+
+From a fresh clone with Python 3.10+ (no third-party packages required):
+
+```sh
+python3 scripts/build.py --check
+python3 -m unittest discover -s tests -v
+```
+
+On 2026-10-21 these commands passed on Linux with Python 3.12.14: 32 tests
+and the generated-package consistency check. This verifies the local helpers
+and packaging, not installation into every ChatGPT/Codex client. The project
+remains an adaptation of Noah Kim's toolkit; see [NOTICE.md](NOTICE.md).
